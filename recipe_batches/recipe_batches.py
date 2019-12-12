@@ -8,8 +8,8 @@ def recipe_batches(recipe, ingredients):
   ingredientVals = ingredients.values()
   if len(ingredientVals) < len(recipeVals): 
     return 0
-  for (i, x) in zip(recipeVals, ingredientVals):
-    batches.append(x//i)
+  for (r, i) in zip(recipeVals, ingredientVals):
+    batches.append(i//r)
   return min(batches)
   
 
